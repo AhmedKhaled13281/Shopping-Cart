@@ -14,7 +14,7 @@ const handleCart = (state = cart , action) => {
         }
         break;
       case 'DELETE' :
-        if (exist)
+        if (exist.quantity === 1)
         {
           return state.filter(x => x.id !== product.id )
         }else{
